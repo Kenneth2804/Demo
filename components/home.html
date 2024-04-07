@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<title>Home</title>
+</head>
+<body>
+<div class="navbar">
+	<a href="">Inicio</a>
+	<a href="">Imagenes</a>
+	<a href="">Videos</a>
+	<div class="search-container">
+		<input type="text" class="search-input" id="search-bar" placeholder="Buscar" onkeyup="searchButton()">
+		<button class="search-Button" onclick="searchButton()">Buscar</button>
+	</div>
+</div>
+
+<div class="button-container" id="button-container">
+	
+<a href="" class="button">Introducción a los Grupos Prioritarios</a>
+<a href="" class="button">¿Qué son los Grupos Prioritarios?</a>
+<a href="" class="button">Importancia de la Atención Prioritaria</a>
+<a href="" class="button">Grupos Prioritarios: Una Perspectiva Global</a>
+<a href="" class="button">Desafíos que Enfrentan los Grupos Prioritarios</a>
+<a href="" class="button">Derechos Humanos y Grupos Prioritarios</a>
+<a href="" class="button">Promoviendo la Equidad: Estrategias para Apoyar a los Grupos Prioritarios</a>
+<a href="" class="button">Empoderamiento de los Grupos Prioritarios: Historias de Éxito</a>
+<a href="" class="button">Herramientas y Recursos para la Inclusión de los Grupos Prioritarios</a>
+
+</div>
+
+<script>
+	function searchButton() {
+    var input, filter, container, buttons, button, i, txtValue;
+    input = document.getElementById("search-bar");
+    filter = input.value.toUpperCase();
+    container = document.getElementById("button-container");
+    buttons = container.getElementsByTagName("a");
+    
+     for (i = 0; i < buttons.length; i++) {
+        button = buttons[i];
+        txtValue = button.textContent || button.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            button.style.display = "";
+        } else {
+            button.style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+
+</html>
